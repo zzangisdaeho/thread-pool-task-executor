@@ -18,6 +18,7 @@ class WithAsyncTest {
             withAsync.task();
 
         }
+        //ThreadPoolTaskExecutor 는 demon thread로 추정된다. main thread를 살려주어야 에러가 나지 않는다.
         Thread.sleep(1000000000);
     }
 }
