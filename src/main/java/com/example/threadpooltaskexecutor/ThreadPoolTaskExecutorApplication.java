@@ -13,7 +13,7 @@ public class ThreadPoolTaskExecutorApplication {
     public static void main(String[] args) {
         SpringApplication.run(ThreadPoolTaskExecutorApplication.class, args);
 
-        threadPoolTaskTest();
+//        threadPoolTaskTest();
     }
 
 
