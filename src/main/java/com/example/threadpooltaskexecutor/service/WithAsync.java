@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class WithAsync {
 
-    @Async
+    //taskexecutor가 2개 이상 등록되어 있는 경우, bean지정해주지 않으면 simpletask로 지정되어 돌아간다.
+    @Async("executor2")
+//    @Async
     public void task() {
         try {
             log.info(Thread.currentThread().getName() + ", Now sleeping 3 seconds...");

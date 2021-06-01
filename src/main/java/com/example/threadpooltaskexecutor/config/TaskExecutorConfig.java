@@ -12,10 +12,22 @@ public class TaskExecutorConfig {
     @Bean
     public ThreadPoolTaskExecutor executor(){
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setThreadNamePrefix("my-test-");
+        executor.setThreadNamePrefix("my-test1-");
         executor.setCorePoolSize(1);
         executor.setQueueCapacity(5);
         executor.setMaxPoolSize(3);
+        executor.setWaitForTasksToCompleteOnShutdown(true);
+        return executor;
+    }
+
+    @Bean
+    public ThreadPoolTaskExecutor executor2(){
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setThreadNamePrefix("my-test2-");
+        executor.setCorePoolSize(1);
+        executor.setQueueCapacity(5);
+        executor.setMaxPoolSize(3);
+        executor.setWaitForTasksToCompleteOnShutdown(true);
         return executor;
     }
 }
